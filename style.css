@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(250,250,250);
+    font-family:'Quicksand', sans-serif;
+    overflow: hidden;
+}
+.res-bar{
+    display: none;
+}
+.wrapper .sidebar {
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    height: 100vh;
+    /* background: grey; */
+}
+#cart{
+    visibility:hidden;
+}
+#menu{
+    visibility:hidden;
+}
+.wrapper .main-content{
+    width: 80vw; 
+    margin-left: 24vw;
+}
+.main-content{
+    margin-top: 16vh;
+}
+
+.wrapper .sidebar h1{
+    color: black;
+    /* text-align: center; */
+    font-family:'Rozha One', serif;
+    font-size: 2.5rem;
+    line-height: 1.2em;
+    margin-left: 5vw;
+    margin-top: 7vh;
+    margin-bottom: 5vh;
+}
+
+.items{
+    margin-left: 5vw;
+}
+.items a{
+    
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 1.2rem;
+    color: rgb(150, 149, 149);
+}
+.items a:hover{
+    color: rgb(234, 72, 74);
+}
+
+#item1{
+    text-decoration: line-through 2px solid red;
+}
+#btn{
+    margin-top: 6vh;
+    width: 11vw;
+    height: 7vh;
+    color: white;
+    background-color: rgb(234, 72, 74);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.main-content h2{
+    font-family: 'Rozha One', serif;
+    font-size: 5rem;
+}
+
+.text-right {
+    position: absolute;
+    font-size: 1.1rem;
+    top: 18vh;
+    right: 8vw;
+    line-height: 1.7rem;
+}
+
+.text-right hr {
+    display: block;
+    height: 1px;
+    width: 30%;
+    border: 0;
+    border-top: 3px solid red;
+    margin-top: 25px;
+}
+
+.card-item {
+    /* position: absolute; */
+    /* left: 20vw; */
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: flex-end;
+    /* gap: 20px; */
+    column-gap: 20px;
+}
+
+.card-child {
+    /* margin-left: 100px; */
+    border-radius: 10%; 
+    width: 200px;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    cursor: pointer;
+    /* position: relative; */
+}
+
+.card-child:hover {
+    box-shadow: 0 4px 8px 0 rgb(234, 72, 74, 0.5), 0 6px 20px 0 rgb(234, 72, 74, 0.4);
+}
+
+.card-child img {
+    position: relative;
+    display: inline;
+    border-radius: 50%;
+    top: 1.5rem;
+    width: 75%;
+    height: 60%;
+}
+
+.card-child .container{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    position: relative;
+    top: 20%;
+}
+
+/* adding responsiveness to the page */
+/* Mobile Devices */
+
+@media (max-width: 480px) {
+
+    body{
+        overflow: scroll;
+    }
+    .sidebar h1{
+        display: none;
+    }
+    .heading{
+        display: none;
+    }
+    #btn{
+        display: none;
+    }
+    .sidebar {
+        display: none;
+    }
+    .res-bar{
+        display: none;
+    }
+    .res-bar.active {
+        display: flex;
+        border: none;
+        border-radius: 15px;
+        z-index: 1;
+        background-color: rgb(105, 101, 101);
+        position:fixed;
+        left: 12vw;
+        top: 9.3vh;
+        width: 30vw;
+        height: 48vh;
+    }
+
+    .res-bar a{
+        line-height: 50px;
+    }
+    .responsive h1{
+        font-family:'Rozha One', serif;
+        visibility: visible;
+        position: absolute;
+        top: 5vh;
+        left: 40vw;
+        align-items: center;
+    }
+    #cart {
+        visibility: visible;
+        position: absolute;
+        transform: scaleX(-1);
+        right: 10px;
+        top: 5vh;
+        width: 10%;
+        filter: invert(12%) sepia(96%) saturate(7366%) hue-rotate(356deg) brightness(97%) contrast(115%);
+    }
+    #menu {
+        visibility: visible;
+        position: absolute;
+        display:block;
+        left: 20px;
+        top: 42px;
+        width: 7%;
+        filter: invert(12%) sepia(96%) saturate(7366%) hue-rotate(356deg) brightness(97%) contrast(115%);
+    }
+
+    .main-content h2{
+        font-size: 1.8rem;
+        position: relative;
+        right: 50px;
+    }
+    
+    .text-right{
+        visibility: hidden;
+    }
+    
+    .text-right-res {
+        margin: 10px 17px;
+        display: block;
+        height: 50%;
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+    }
+    
+    .text-right-res hr {
+        display: block;
+        height: 1px;
+        width: 30%;
+        border: 0;
+        border-top: 3px solid red;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+    .card-item {
+        /* position: absolute; */
+        position: relative;
+        margin-left: 4vw;
+        align-content:center ;
+        justify-content: center;
+        margin-top: 6vh;
+        display: flex;
+        flex: 50%;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        gap: 20px;
+        /* column-gap: 10px; */
+    }
+    .card-child {
+        /* margin-left: 100px; */
+        border-radius: 10%; 
+        width: 160px;
+        height: 200px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        cursor: pointer;
+        /* position: relative; */
+    }
+    .card5 {
+        display: none;
+    }
+    .card-child .container{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 800;
+        position: relative;
+        top: 20%;
+    }
+}
+
+/*Responsiveness for  Tablets */
+
+@media (max-width: 1024px) and (min-width:481px){
+    body{
+        overflow: hidden;
+    }
+    .flow{
+        display: none;
+    }
+    
+    .wrapper .sidebar {
+        position:fixed;
+        left: 0;
+        top: 0;
+        width: 20vw;
+        height: 100vh;
+        /* background: grey; */
+    }
+    .res-bar{
+        display: none;
+    }
+    #cart{
+        visibility:hidden;
+    }
+    #menu{
+        visibility:hidden;
+    }
+    .wrapper .main-content{
+        width: 80vw; 
+        margin-left: 24vw;
+    }
+    .main-content{
+        margin-top: 16vh;
+    }
+    
+    .wrapper .sidebar h1{
+        color: black;
+        /* text-align: center; */
+        font-family:'Rozha One', serif;
+        font-size: 2.5rem;
+        line-height: 1.2em;
+        margin-left: 5vw;
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+    }
+    
+    .items{
+        margin-left: 5vw;
+    }
+    .items a{
+        
+        list-style-type: none;
+        text-decoration: none;
+        line-height: 50px;
+        font-size: 1.2rem;
+        color: rgb(150, 149, 149);
+    }
+    .items a:hover{
+        color: rgb(234, 72, 74);
+    }
+    
+    #item1{
+        text-decoration: line-through 2px solid red;
+    }
+    #btn{
+        margin-top: 6vh;
+        width: 10vw;
+        height: 4vh;
+        color: white;
+        background-color: rgb(234, 72, 74);
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    
+    .main-content h2{
+        font-family: 'Rozha One', serif;
+        font-size: 2.4rem;
+    }
+    
+    .text-right {
+        position: absolute;
+        font-size: 0.8rem;
+        top: 16vh;
+        right: 0vw;
+        line-height: 1.7rem;
+    }
+    
+    .text-right hr {
+        display: block;
+        height: 1px;
+        width: 30%;
+        border: 0;
+        border-top: 3px solid red;
+        margin-top: 25px;
+    }
+    
+    .card-item {
+        /* position: absolute; */
+        /* left: 20vw; */
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: flex-end;
+        /* gap: 20px; */
+        column-gap: 20px;
+    }
+    .card5{
+        display: none;
+    }
+    
+    .card-child {
+        /* margin-left: 100px; */
+        border-radius: 10%; 
+        width: 130px;
+        height: 165px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        cursor: pointer;
+        /* position: relative; */
+    }
+    
+    .card-child:hover {
+        box-shadow: 0 4px 8px 0 rgb(234, 72, 74, 0.5), 0 6px 20px 0 rgb(234, 72, 74, 0.4);
+    }
+    
+    .card-child img {
+        position: relative;
+        display: inline;
+        border-radius: 50%;
+        top: 1.5rem;
+        width: 75%;
+        height: 60%;
+    }
+    
+    .card-child .container{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 0.8em;
+        font-weight: 800;
+        position: relative;
+        top: 20%;
+    } 
+}
